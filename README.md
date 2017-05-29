@@ -1,2 +1,5 @@
-# ecg-diff-int-fft
-Derivative, integral and FFT calculations for an ECG signal using the WFDB Toolbox
+# ECG derivative, integral and FFT
+
+## Usage
+
+For downloading dependencies, run `initWFBD.m`
