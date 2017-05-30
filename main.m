@@ -10,8 +10,11 @@ Fs = Fs(1);
 h = 1 / Fs;
 diffSignal = gradient(signal, h);
 
+% Square derivative
+sqDiffSignal = diffSignal.^2;
+
 % Cumulative integral
-integralSignal = cumtrapz(tm, signal);
+integralSignal = cumtrapz(tm, sqDiffSignal);
 
 % Discrete Fourier transform
 n = 2 ^ nextpow2(m);
@@ -35,8 +38,8 @@ title('Signal derivative');
 subplot(2, 2, 3);
 plot(tm, integralSignal, 'g');
 xlabel('Time (s)');
-ylabel('Cumulative integral (mVs)');
-title('Cumulative integral');
+ylabel('Cumulative integral of sq. der. ((mV)^2 / s)');
+title('Integral of squared derivative');
 
 subplot(2, 2, 4);
 plot(f, fftSignal(1 : n/2+1));
