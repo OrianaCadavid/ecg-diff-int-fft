@@ -3,5 +3,5 @@ wfdb_url='http://physionet.org/physiotools/matlab/wfdb-app-matlab/wfdb-app-toolb
 [filestr,status] = urlwrite(wfdb_url,'wfdb-app-toolbox-0-9-10.zip');%Octave users may have to download manually
 unzip('wfdb-app-toolbox-0-9-10.zip');
 cd wfdb-app-toolbox-0-9-10;cd mcode
-addpath(pwd);savepath
+addpath(pwd);
 cd ../..

@@ -1,5 +1,6 @@
 clc;
 clear all;
+addpath('./wfdb-app-toolbox-0-9-10/mcode/');
 
 m = 1000;
 [tm, signal, Fs] = rdsamp('mitdb/122', [], m);
